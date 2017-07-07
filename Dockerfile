@@ -1,5 +1,3 @@
 FROM alpine
-RUN apk update && apk add nodejs
-COPY . /app
-WORKDIR /app
-CMD ["node","index.js"]
+VOLUME ["/data"]
+ENTRYPOINT ["/bin/sh"]
